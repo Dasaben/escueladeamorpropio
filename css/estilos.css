@@ -101,6 +101,19 @@ section p {
   line-height: 1.6;
 }
 
+.sobre-escuela p {
+  text-align: justify !important;
+  text-align-last: left;
+  hyphens: auto;
+}
+
+.justificado {
+  text-align: justify;
+  text-justify: inter-word; /* mejora la distribución de palabras */
+}
+
+
+
 /* Listas dentro de secciones */
 section ul {
   max-width: 760px;
@@ -640,10 +653,18 @@ body.dark .faq-question {
     padding: 0 15px;
   }
 
-  .foto-portada {
-    max-height: 240px;   /* portada más pequeña en móviles */
-    width: 100%;
+@media (max-width: 768px) {
+  .portada {
+    height: 60vh; /* un poco más baja en tablets/celulares */
   }
+}
+
+@media (max-width: 480px) {
+  .portada {
+    height: 50vh; /* aún más baja en celulares pequeños */
+  }
+}
+
 
   .foto-perfil {
     width: 120px;
